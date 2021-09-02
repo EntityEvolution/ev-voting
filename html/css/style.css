@@ -24,17 +24,35 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    overflow-x: scroll;
+    overflow-x: auto;
     width: 50%;
     height: 40%;
+    border-radius: 1.6vh;
+}
 
-    background-color: red;
+.container::-webkit-scrollbar {
+    height: 0.8vh;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: #555;
+    border-radius: 1.6vh;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgb(141, 141, 141);
+    border-radius: 1.6vh;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #a7a7a7;
 }
 
 .job-container {
     position: relative;
-    padding: 18.0vh 12vh;
+    padding: 18.0vh 13vh;
+    border-radius: 0.6vh;
     margin-right: 2.5%;
 
-    background-color: blue;
+    background-color: rgba(37, 39, 41, 0.85);
 }

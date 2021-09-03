@@ -17,6 +17,18 @@ this.window.addEventListener('DOMContentLoaded', () => {
     .catch((error) => {console.log('Config Error: ' + error)})
 })
 
+const fetchNUI = async (cbname, data) => {
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8'
+        },
+        body: JSON.stringify(data)
+    };
+    const response = await fetch(`https://ev-jobcenter/${cbname}`, options);
+    return await response.json();
+}
+
 function appendData(data) {
     const container = doc.getElementById('container');
     data.forEach(dataItem => {
@@ -32,7 +44,7 @@ function appendData(data) {
         const hoverLocation = doc.createElement('span');
         const hoverBtn = doc.createElement('btn');
 
-        hoverBtn.addEventListener('click', () => {console.log(dataItem.id)})
+        hoverBtn.addEventListener('click', () => {fetchNUI('getVotingInfo', dataItem.id)})
 
         // Add classes
         hoverBtn.classList.add('info-btn');

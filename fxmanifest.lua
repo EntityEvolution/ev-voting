@@ -8,9 +8,7 @@ description 'A simple voting resource created by Entity Evolution'
 
 version '1.0.0'
 
-client_scripts {
-    'client/*.lua'
-}
+client_script 'nui.lua'
 
 ui_page 'html/ui.html'
 

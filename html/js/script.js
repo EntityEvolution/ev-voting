@@ -1,21 +1,32 @@
 const doc = document;
+const wrapper = doc.getElementById('wrapper');
 
 this.window.addEventListener('load', e => {
     window.addEventListener('message', e => {
         switch (e.data.action) {
-            case 'updateInfo':
+            case 'show':
+                wrapper.style.display = 'flex'
+            break;
 
+            case 'hide':
+                wrapper.style.display = 'none'
             break;
         }
     })
 })
 
 this.window.addEventListener('DOMContentLoaded', () => {
-    fetch('../config.json')
+    fetch('../config/config.json')
     .then((response) => response.json())
     .then((data) => appendData(data))
     .catch((error) => {console.log('Config Error: ' + error)})
 })
+
+doc.onkeyup = e => {
+    if (e.key == 'Escape') {
+        fetchNUI('getVotingInfo')
+    }
+}
 
 const fetchNUI = async (cbname, data) => {
     const options = {
@@ -25,7 +36,7 @@ const fetchNUI = async (cbname, data) => {
         },
         body: JSON.stringify(data)
     };
-    const response = await fetch(`https://ev-jobcenter/${cbname}`, options);
+    const response = await fetch(`https://ev-voting/${cbname}`, options);
     return await response.json();
 }
 
@@ -63,7 +74,7 @@ function appendData(data) {
         infoTitle.textContent = dataItem.name;
         infoDesc.textContent = dataItem.about;
         infoLogo.src = dataItem.image;
-        
+
         info.append(infoWave, infoLogo, infoTitle, infoDesc);
         hover.append(hoverLocation, hoverBtn);
         slide.append(info, hover);

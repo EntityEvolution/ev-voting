@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": "mario",
         "name": "First person",
         "about": "Occupation",
         "place": "Location",
@@ -8,16 +8,8 @@
     },
 
     {
-        "id": "2",
-        "name": "Second person",
-        "about": "Occupation",
-        "place": "Location",
-        "image": "./img/test.jpg"
-    },
-
-    {
-        "id": "3",
-        "name": "Third person",
+        "id": "pepe",
+        "name": "First person",
         "about": "Occupation",
         "place": "Location",
         "image": "./img/test.jpg"

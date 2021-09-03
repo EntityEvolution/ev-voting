@@ -1,5 +1,11 @@
 @font-face {
-    font-family: future;
+    font-family: kum;
+    src: url(../fonts/KumbhSans-SemiBold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: kum2;
     src: url(../fonts/KumbhSans-VariableFont_wght.ttf);
     font-display: swap;
 }
@@ -23,15 +29,16 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    overflow-x: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow-x: hidden;
     width: 50%;
     height: 40%;
-    border-radius: 1.6vh;
 }
 
 .container::-webkit-scrollbar {
-    height: 0.8vh;
+    width: 0.8vh;
 }
 
 .container::-webkit-scrollbar-track {
@@ -50,9 +57,144 @@ body {
 
 .job-container {
     position: relative;
-    padding: 18.0vh 13vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: red;
+    width: 30%;
+    height: 85%;
     border-radius: 0.6vh;
-    margin-right: 2.5%;
+    margin: 1%;
 
     background-color: rgba(37, 39, 41, 0.85);
+}
+
+.job-container:hover .job-wave {
+    top: -40%;
+    transform: scale(1.8);
+}
+
+.job-container:hover .hover-container {
+    opacity: 1;
+    margin-top: 2.5%;
+}
+
+.job-container:hover .info-container {
+    height: 68%;
+    font-size: 3.0vh;
+}
+
+.job-container:hover .description {
+    height: 70%;
+    font-size: 1.7vh;
+    margin-top: 1.5%;
+}
+
+.job-container:hover .job-logo {
+    height: 40%;
+}
+
+
+.info-container {
+    z-index: 2;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+
+    font-size: 4.0vh;
+    font-family: kum;
+    color: #e8e8e8;
+    transition: 0.6s;
+}
+
+.job-logo {
+    margin-top: 15%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 35%;
+    z-index: 1;
+    border-radius: 0.6vh;
+    box-shadow: 0.1vh 0.5vh 1vh #222222b3;
+    transition: 0.6s;
+}
+
+.job-wave {
+    position: absolute;
+    border-top-left-radius: 0.6vh;
+    border-top-right-radius: 0.6vh;
+    top: -15%;
+    right: -15%;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    background-color: #a3dd1a;
+    transition: 0.6s;
+}
+
+.title {
+    margin-top: 5%;
+    z-index: 1;
+}
+
+.description {
+    margin-top: 5%;
+    font-size: 1.8vh;
+    color: #d1d1d1;
+    z-index: 1;
+    transition: 0.6s;
+}
+
+.hover-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+
+    font-size: 3.0vh;
+    font-family: kum;
+    color: #e8e8e8;
+    transition: 0.6s;
+    opacity: 1;
+    margin-top: 0%;
+}
+
+.location {
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    font-size: 1.8vh;
+    font-variant: small-caps;
+    font-family: kum2;
+    color: #e4e4e4;
+    z-index: 1;
+}
+
+.info-container:hover .hover-container {
+    transform: scale(1.5);
+}
+
+.info-btn {
+    font-size: 1.6vh;
+    font-family: kum;
+    padding: 1.0vh 2.0vh;
+    color: black;
+    border-radius: 0.4vh;
+    border: none;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.info-btn:hover {
+    background-color: #a3dd1a;
+    cursor: pointer;
 }

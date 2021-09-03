@@ -1,8 +1,25 @@
 [
     {
+        "id": "1",
         "name": "First person",
         "about": "Occupation",
         "place": "Location",
-        "image": "link"
+        "image": "./img/test.jpg"
+    },
+
+    {
+        "id": "2",
+        "name": "Second person",
+        "about": "Occupation",
+        "place": "Location",
+        "image": "./img/test.jpg"
+    },
+
+    {
+        "id": "3",
+        "name": "Third person",
+        "about": "Occupation",
+        "place": "Location",
+        "image": "./img/test.jpg"
     }
 ]

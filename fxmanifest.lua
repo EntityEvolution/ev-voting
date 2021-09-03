@@ -12,12 +12,13 @@ client_scripts {
     'client/*.lua'
 }
 
-server_scripts {
-    'server/*.lua'
-}
-
 ui_page 'html/ui.html'
 
 files {
-    
+    'html/ui.html',
+    'config.json',
+    'html/fonts/*.ttf',
+    'html/img/*.jpg',
+    'html/css/style.css',
+    'html/js/script.js'
 }

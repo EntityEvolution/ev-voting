@@ -8,9 +8,3 @@ This project does not contain a license, therefore you are not allowed to add on
 - Standalone.
 - Using polyzones to allow multiple places to open UI.
 - Easy to configure using a JSON file along with config.
-
-### [Forum Post](https://forum.cfx.re/t/release-standalone-ev-voting/4751300)
-### [Discord](https://discord.com/invite/u4zk4tVTkG)
-### [Donations](https://www.buymeacoffee.com/bombayV)
-### [Preview](https://i.file.glass/4eaca.png)
-### [Video](https://youtu.be/ADutgyN1p0c)
